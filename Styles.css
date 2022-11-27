@@ -1,0 +1,230 @@
+body{
+    padding: 5rem 10rem;
+    font-family: 'Inter', sans-serif;
+}
+.main {
+    display: grid;
+    grid-gap: 2rem;
+    padding-bottom: 10rem;
+}
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.nav .bar {
+    text-align: end;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1rem;
+    color: hsl(236, 13%, 42%);
+}
+span:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+.a {
+    display: grid;
+    grid-gap: 2rem;
+}
+.b {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.box1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.box2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 19.75rem;
+}
+.box3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-right: 4rem;
+}
+.box4 {
+    background-color: hsl(240, 100%, 5%);
+    grid-column: 3/4;
+    grid-row: 1/3;
+    color: hsl(36, 100%, 99%);
+}
+.box4 p {
+    padding: 0 1rem 0;
+    font-weight: 400;
+}
+.box4 h3 {
+    padding: 0 1rem 0;
+}
+.box4 h1{
+    padding-left: 1rem;
+    color: hsl(35, 77%, 62%);
+}
+.box4 h3:hover{
+    cursor: pointer;
+    color: hsl(35, 77%, 62%);
+}
+p {
+    color: hsl(236, 13%, 42%);
+}
+hr{
+    width: 80%;
+    border-top: 0;
+    color: hsl(233, 8%, 79%);
+}
+.web-image{
+    max-width: 100%;
+}
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.card img{
+    max-width: 100%;
+}
+.box2 h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+.box3 p {
+    margin: 0 0 2rem;
+}
+.card h2 {
+    margin: 0;
+    color: hsl(233, 8%, 79%);
+    padding-left: 1rem;
+}
+.card h3 {
+    margin: 0;
+    padding-left: 1rem;
+}
+.card:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+.card p {
+    margin: 0;
+    padding-left: 1rem;
+}
+button {
+    width: 70%;
+    height: 3rem;
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    letter-spacing: 0.25rem;
+}
+button:hover {
+    cursor: pointer;
+    background-color: hsl(240, 100%, 5%);
+}
+.nav .menu{
+    display: none;
+    text-align: end;
+}
+.hidden{
+    display: none;
+}
+.closed{
+    position: relative;
+    left: 14rem;
+    bottom: 5rem;
+}
+@media (min-width:950px) and (max-width:1075px) {
+    .box1 {
+        grid-column: 1/4;
+    }
+    .box4 {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    .box3 {
+        padding: 0;
+    }
+    .b {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:650px) and (max-width:950px){
+    .web-image {
+        content: url(./assets/images/image-web-3-mobile.jpg);
+    }
+    .box1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .box2{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: unset;
+    }
+    .box3{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding: 0;
+    }
+    .box4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .b {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:650px) {
+    body {
+        padding: 0;
+    }
+    .nav .bar{
+        display: none;
+    }
+    .web-image {
+        content: url(./assets/images/image-web-3-mobile.jpg);
+    }
+    .box1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .box2{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: unset;
+    }
+    .box3{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding: 0;
+    }
+    .box4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .b {
+        grid-template-columns: 1fr;
+    }
+    .nav .menu{
+        display: unset;
+    }
+    .nav-bar{
+        display: grid;
+        width: 30%;
+        background-color: white;
+        height: 39rem;
+        position: fixed;
+        right: 0rem;
+        grid-template-columns: 1fr;
+        top: 0rem;
+        padding-right: 10rem;
+        padding-top: 7rem;
+        padding-left: 1rem;
+        justify-items: left;
+        grid-auto-rows: 4rem;
+    }
+    .hidden{
+        display: none;
+    }
+}
